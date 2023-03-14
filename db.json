@@ -1,12 +1,55 @@
 {
-  "freelancers":[
-    
+  "freelancers": [
+    {
+      "fullname": "srikanth",
+      "gender": "male",
+      "img": "https://media.licdn.com/dms/image/C5103AQEOJPrf_VFaXA/profile-displayphoto-shrink_200_200/0/1565340799903?e=1683158400&v=beta&t=4gfPzga8eb4yKbGFx3pGa8ndRgpusOXNV6fgFcFHuks",
+      "hourCost": "343",
+      "technologies": [
+        "cdd",
+        "git"
+      ],
+      "id": 5
+    },
+    {
+      "fullname": "kalyani",
+      "gender": "female",
+      "img": "https://malayalam.filmibeat.com/fanimg/artist/2340/kalyani-priyadarshan-photos-images-9034.jpg",
+      "hourCost": "222",
+      "technologies": [
+        "html",
+        "css"
+      ],
+      "id": 6
+    },
+    {
+      "fullname": "priya",
+      "gender": "female",
+      "img": "https://m.media-amazon.com/images/M/MV5BZTVmYWQ2ZTMtN2JiMi00NGZkLWJjNTItM2QyYWI5NWNmZDg5XkEyXkFqcGdeQXVyMzYxOTQ3MDg@._V1_FMjpg_UX1000_.jpg",
+      "hourCost": "299",
+      "technologies": [
+        "html",
+        "css",
+        "javascr"
+      ],
+      "id": 7
+    }
   ],
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }

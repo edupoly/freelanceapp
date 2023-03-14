@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormControl,FormGroup } from '@angular/forms';
+import { RegistrationService } from 'src/app/core/registration.service';
 @Component({
   selector: 'app-regform',
   templateUrl: './regform.component.html',
   styleUrls: ['./regform.component.css']
 })
 export class RegformComponent {
-  constructor(public fb:FormBuilder){}
+  constructor(public fb:FormBuilder,public regServ:RegistrationService){}
   newtech:string='';
   regForm:FormGroup = this.fb.group({
     fullname:[''],
@@ -28,5 +29,10 @@ export class RegformComponent {
   }
   removeTechnology(i:number){
     this.technologies.removeAt(i)
+  }
+  addFreelancer(){
+    this.regServ.registerFreelancer(this.regForm.value).subscribe((res)=>{
+      console.log(res)
+    })
   }
 }
