@@ -1,0 +1,37 @@
+<div class="container" [formGroup]="regForm">
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Full Name</label>
+    <input formControlName="fullname" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Gender</label>
+    <div class="form-control">
+      <input formControlName="gender" type="radio" value ='male' class="form-check-input" id="formGroupExampleInput2" >
+      <label class="form-check-label">:Male</label>
+      <input formControlName="gender" type="radio" value ='female' class="form-check-input" id="formGroupExampleInput2" >
+      <label class="form-check-label">:Female</label>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Enter Image URL</label>
+    <input formControlName="img" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Enter Per Hour Cost</label>
+    <input formControlName="hourCost" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  </div>
+  <div formArrayName="technologies">
+    <div class="form-label">Technologies</div>
+    <input type="text" #newtech>
+    <button (click)="addTechnology(newtech)">Add Technology+</button>
+    <div class="border p-2 m-2 d-flex">
+      <div *ngFor="let tech of technologies.value; let i=index">
+        <div class="border border-2 m-2 p-2">
+          {{tech}}
+          <button class="btn btn-secondary btn-sm" (click)="removeTechnology(i)">x</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
